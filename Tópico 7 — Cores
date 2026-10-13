@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tópico 7 - Paleta de Cores</title>
+
+  <style>
+    /* Configurações gerais */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 32px 20px;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+
+    /* Área principal */
+    .container {
+      width: 100%;
+      max-width: 760px;
+    }
+
+    .header {
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin-bottom: 10px;
+      font-size: 30px;
+      color: #123B32;
+    }
+
+    .header p {
+      color: #64748b;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* Grade de cores */
+    .colors {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .color-card {
+      overflow: hidden;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .color-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .swatch {
+      height: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* Paleta */
+    .primary {
+      background-color: #123B32;
+      color: #ffffff;
+    }
+
+    .secondary {
+      background-color: #B8E0C2;
+      color: #123B32;
+    }
+
+    .success {
+      background-color: #16A34A;
+      color: #ffffff;
+    }
+
+    .warning {
+      background-color: #FACC15;
+      color: #422006;
+    }
+
+    .neutral {
+      background-color: #64748B;
+      color: #ffffff;
+    }
+
+    /* Informações de cada cor */
+    .color-info {
+      padding: 16px;
+    }
+
+    .color-info h2 {
+      margin-bottom: 6px;
+      font-size: 16px;
+      color: #1e293b;
+    }
+
+    .color-info p {
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    .hex {
+      display: inline-block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      background-color: #f1f5f9;
+      color: #334155;
+      font-family: monospace;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      .colors {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .header h1 {
+        font-size: 25px;
+      }
+
+      .swatch {
+        height: 110px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .colors {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="header">
+      <h1>Paleta de Cores</h1>
+      <p>
+        Finanças com equilíbrio, confiança e clareza.
+        Conheça as cores da identidade visual do aplicativo.
+      </p>
+    </header>
+
+    <section class="colors" aria-label="Paleta de cores do aplicativo">
+
+      <article class="color-card">
+        <div class="swatch primary">Primária</div>
+        <div class="color-info">
+          <h2>Verde-escuro</h2>
+          <p>Identidade visual, títulos e elementos principais.</p>
+          <span class="hex">#123B32</span>
+        </div>
+      </article>
+
+      <article class="color-card">
+        <div class="swatch secondary">Secundária</div>
+        <div class="color-info">
+          <h2>Verde-claro</h2>
+          <p>Fundos suaves e elementos complementares.</p>
+          <span class="hex">#B8E0C2</span>
+        </div>
+      </article>
+
+      <article class="color-card">
+        <div class="swatch success">Sucesso</div>
+        <div class="color-info">
+          <h2>Verde positivo</h2>
+          <p>Receitas, saldo positivo e metas concluídas.</p>
+          <span class="hex">#16A34A</span>
+        </div>
+      </article>
+
+      <article class="color-card">
+        <div class="swatch warning">Aviso</div>
+        <div class="color-info">
+          <h2>Amarelo</h2>
+          <p>Alertas de orçamento e contas próximas do vencimento.</p>
+          <span class="hex">#FACC15</span>
+        </div>
+      </article>
+
+      <article class="color-card">
+        <div class="swatch neutral">Neutra</div>
+        <div class="color-info">
+          <h2>Cinza-azulado</h2>
+          <p>Textos secundários, legendas e informações auxiliares.</p>
+          <span class="hex">#64748B</span>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+</body>
+</html>
